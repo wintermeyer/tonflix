@@ -43,7 +43,7 @@ defmodule TonflixWeb do
         layouts: [html: TonflixWeb.Layouts]
 
       import Plug.Conn
-      import TonflixWeb.Gettext
+      use Gettext, backend: TonflixWeb.Gettext
 
       unquote(verified_routes())
     end
@@ -85,7 +85,7 @@ defmodule TonflixWeb do
       import Phoenix.HTML
       # Core UI components and translation
       import TonflixWeb.CoreComponents
-      import TonflixWeb.Gettext
+      use Gettext, backend: TonflixWeb.Gettext
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS

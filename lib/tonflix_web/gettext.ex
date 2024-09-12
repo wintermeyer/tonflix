@@ -5,7 +5,7 @@ defmodule TonflixWeb.Gettext do
   By using [Gettext](https://hexdocs.pm/gettext),
   your module gains a set of macros for translations, for example:
 
-      import TonflixWeb.Gettext
+      use Gettext, backend: TonflixWeb.Gettext
 
       # Simple translation
       gettext("Here is the string to translate")
@@ -20,5 +20,5 @@ defmodule TonflixWeb.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :tonflix
+  use Gettext.Backend, otp_app: :tonflix
 end
