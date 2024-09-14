@@ -39,7 +39,8 @@ config :spark,
 
 config :tonflix,
   ecto_repos: [Tonflix.Repo],
-  generators: [timestamp_type: :utc_datetime]
+  generators: [timestamp_type: :utc_datetime],
+  ash_domains: [Tonflix.Accounts]
 
 # Configures the endpoint
 config :tonflix, TonflixWeb.Endpoint,
